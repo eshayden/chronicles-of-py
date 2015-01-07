@@ -1,0 +1,24 @@
+# This way uses the range() function to get a list of integers to loop over.
+
+def sum(n):
+    n = int(raw_input("Give me an integer. "))
+    sum = 0
+    for i in range(0, n + 1):
+        sum = sum + i
+    print "The sum of integers from 1 to %d is %d" % (n, sum)
+       
+sum(n)
+
+# This way does it without the built-in function from the library.
+
+n = int(raw_input("Give me an integer. "))
+
+def sum(n):
+    sum = 0     # This starts the sum at zero.
+    i = 0       # This starts the integer at 0. 
+    while i < n:
+        i = i + 1   # this increases the integer by 1 each time
+        sum = sum + i   # this adds the next integer to the sum
+    print "The sum of the integers from 1 to %d is %d." % (n, sum)
+       
+sum(n)
