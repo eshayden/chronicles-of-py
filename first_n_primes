@@ -1,0 +1,15 @@
+# Gives the first n primes. Would be faster if it only divided the "test number" by the primes up to sqrt(test), but whatever.
+
+def primes(n):
+    primes = [2]
+    test = 3
+    while len(primes) < n:
+        if all([test % x != 0 for x in primes]):
+            primes.append(test)
+        else:
+            test = test + 1
+    return primes
+
+print "This program will give you the first 'n' primes."
+choice = int(raw_input("How many do you want? "))
+print primes(choice)
